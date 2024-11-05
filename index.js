@@ -14,8 +14,8 @@ let db;
 (async () => {
   try {
     db = await open({
-      // filename: path.join(__dirname, 'database.sqlite'), // Make sure this path is writable
-      filename: './database.sqlite',
+      filename: path.join(__dirname, 'database.sqlite'), // Make sure this path is writable
+      // filename: './database.sqlite',
       driver: sqlite3.Database,
     });
     console.log('Database connection established.');
